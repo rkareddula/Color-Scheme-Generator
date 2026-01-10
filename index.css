@@ -22,6 +22,12 @@ body {
     font-family: "Bungee Spice";
 }
 
+.sub-heading {
+    font-style: italic;
+    color: white;
+
+}
+
 .app {
     width: 500px;
   display: flex;
