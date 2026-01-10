@@ -1,0 +1,130 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  margin-top: 7em;
+    gap: 4em;
+    background-color: #212121;
+    font-family: Inter;
+ 
+}
+
+#heading {
+    font-family: "Bungee Spice";
+}
+
+.app {
+    width: 500px;
+  display: flex;
+  flex-direction: column;
+    border-radius: 5em;
+    
+}
+
+header {
+    padding: 1.4em 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0.2em 0.3em grey;
+}
+
+#color-picker {
+    height: 3em;
+    width: 5em;
+}
+
+.color-container {
+    height: 400px !important;
+}
+
+#color-scheme-selector {
+    padding: 1em;
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: inherit;
+}
+
+#color-scheme {
+    background-color: white;
+    border: 2px solid lightgrey;
+    font-family: inherit;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    padding: 1em;
+}
+
+#color-scheme:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#color-scheme:active {
+transform: scale(0.95);
+}
+
+/* COLOR CONTAINER */
+.color-container {
+    display: flex;
+    height: 75%;
+}
+
+.color-container div {
+    width: 25%;
+}
+
+.color-container-1 {
+    background-color: turquoise;
+}
+
+.color-container-2 {
+    background-color: coral;
+}
+
+.color-container-3 {
+    background-color: grey;
+}
+
+.color-container-4 {
+    background-color: pink;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 2em 0;
+    display: flex;
+    background-color: white;
+    color: black
+}
+
+.footer div {
+    width: 25%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > div:hover {
+cursor: pointer;
+opacity: 0.5;
+
+
+}
+
+.footer > div:active {
+    transform: scale(0.95);
+}
