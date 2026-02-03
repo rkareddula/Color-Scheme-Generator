@@ -15,9 +15,10 @@ body {
   font-family: Inter, sans-serif;
 }
 
-/* #heading {
+#heading {
   font-family: "Bungee Spice", sans-serif;
-} */
+  color: white;
+}
 
 .sub-heading {
   font-style: italic;
