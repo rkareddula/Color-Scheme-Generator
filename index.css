@@ -51,14 +51,13 @@ header {
     border-radius: 4px;
     font-size: 0.8rem;
     font-family: inherit;
-    padding-right: 10em;
+    width: 10em;
 }
 
 #color-scheme {
     border: 2px solid lightgrey;
     font-family: inherit;
     text-align: center;
-    border-radius: 4px;
     font-size: 0.8rem;
     padding: 1.1em;
     background-color: white;
