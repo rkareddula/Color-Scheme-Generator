@@ -6,18 +6,19 @@
 
 body {
     display: flex;
+    padding: 3em;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-top: 7em;
+    text-align: center;
     gap: 4em;
     background-color: #212121;
     font-family: Inter, sans-serif;
 }
 
 #heading {
-    font-family: Inter, sans-serif;
-    color: white;
+    color: whitesmoke;
+    font-family: "Bungee Spice", fantasy;
 }
 
 .sub-heading {
@@ -26,24 +27,22 @@ body {
 }
 
 .app {
-    width: 50vw;
     display: flex;
     flex-direction: column;
-    border-radius: 2em;
 }
 
 header {
-    padding: 1.4em 0;
+    padding: 1.4em 2em;
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 0.2em 0.3em grey;
+    gap: 1em;
 }
 
 #color-picker {
     height: 3em;
-    width: 5em;
+    width: 4em;
+    border: none;
 }
 
 #color-scheme-selector {
@@ -52,16 +51,18 @@ header {
     border-radius: 4px;
     font-size: 0.8rem;
     font-family: inherit;
+    padding-right: 10em;
 }
 
 #color-scheme {
-    background-color: white;
     border: 2px solid lightgrey;
     font-family: inherit;
     text-align: center;
     border-radius: 4px;
     font-size: 0.8rem;
-    padding: 1em;
+    padding: 1.1em;
+    background-color: white;
+    border-radius: 5px;
 }
 
 #color-scheme:hover {
@@ -76,11 +77,13 @@ header {
 /* COLOR CONTAINER */
 .color-container {
     display: flex;
-    height: 40vh;
+    padding: 0 0.2em;
+    background-color: white;
 }
 
 .color-container div {
-    flex: 1;
+    width: 20%;
+    min-height: 40vh;
 }
 
 .color-container-1 {
@@ -99,10 +102,14 @@ header {
     background-color: pink;
 }
 
+.color-container-5 {
+    background-color: red;
+}
+
 /* FOOTER */
 
 .footer {
-    padding: 2em 0;
+    padding: 1.3em 0;
     display: flex;
     background-color: white;
     color: black;
@@ -110,7 +117,6 @@ header {
 
 .footer div {
     flex: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;

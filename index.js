@@ -15,43 +15,39 @@ const colorPickerEl = document.getElementById("color-picker");
 const colorSchemeSelectorEl = document.getElementById("color-scheme-selector");
 const getColorSchemeBtn = document.getElementById("color-scheme");
 
+// Copy to Clipboard Function
+[footer1El, footer2El, footer3El, footer4El, footer5El].forEach((footer) => {
+    footer.addEventListener("click", function () {
+        navigator.clipboard.writeText(footer.textContent.trim());
+    });
+});
+
 // "Get Color Scheme" Button Function
 getColorSchemeBtn.addEventListener("click", function () {
+    const hexValue = colorPickerEl.value.slice(1);
+
+    if (!hexValue || hexValue.length !== 6) {
+        alert("Please select a valid color");
+        return;
+    }
+
     fetch(
-        `https://www.thecolorapi.com/scheme?hex=${colorPickerEl.value.slice(1)}&format=json&mode=${colorSchemeSelectorEl.value}&count=5`,
+        `https://www.thecolorapi.com/scheme?hex=${hexValue}&format=json&mode=${colorSchemeSelectorEl.value}&count=5`,
     )
         .then((res) => res.json())
         .then((data) => {
+            console.log(data);
             color1.style.backgroundColor = data.colors[0].hex.value;
             color2.style.backgroundColor = data.colors[1].hex.value;
             color3.style.backgroundColor = data.colors[2].hex.value;
             color4.style.backgroundColor = data.colors[3].hex.value;
             color5.style.backgroundColor = data.colors[4].hex.value;
 
-            footer1El.innerHTML = data.colors[0].hex.value;
-            footer2El.innerHTML = data.colors[1].hex.value;
-            footer3El.innerHTML = data.colors[2].hex.value;
-            footer4El.innerHTML = data.colors[3].hex.value;
-            footer5El.innerHTML = data.colors[4].hex.value;
-
-            footer1El.addEventListener("click", function () {
-                navigator.clipboard.writeText(footer1El.innerText);
-            });
-
-            footer2El.addEventListener("click", function () {
-                navigator.clipboard.writeText(footer2El.innerText);
-            });
-
-            footer3El.addEventListener("click", function () {
-                navigator.clipboard.writeText(footer3El.innerText);
-            });
-
-            footer4El.addEventListener("click", function () {
-                navigator.clipboard.writeText(footer4El.innerText);
-            });
-
-            footer5El.addEventListener("click", function () {
-                navigator.clipboard.writeText(footer5El.innerText);
-            });
-        });
+            footer1El.innerText = data.colors[0].hex.value;
+            footer2El.innerText = data.colors[1].hex.value;
+            footer3El.innerText = data.colors[2].hex.value;
+            footer4El.innerText = data.colors[3].hex.value;
+            footer5El.innerText = data.colors[4].hex.value;
+        })
+        .catch(() => alert("Error fetching color scheme"));
 });
